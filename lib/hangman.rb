@@ -79,6 +79,7 @@ class Hangman
       break if @guess == @word
     end
 
+    system 'clear'
     if @word == @guess then puts hangman_win
     else puts hangman_dead end
 
@@ -113,7 +114,6 @@ class Hangman
         https://youtu.be/LLFhKaqnWwk
     }
     delete_file
-    reset
     puts '
     Press enter to continue...'
     gets  # simplicity is perfection :>
@@ -270,6 +270,7 @@ class Hangman
 
   def show msg
     puts " #{msg} ".center 60, '─'
+    sleep 1
   end
 end
 
